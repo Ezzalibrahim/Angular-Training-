@@ -1,0 +1,15 @@
+<h2 class="products_page">Welcome To Products Page</h2>
+<form (ngSubmit)="addProduct(f)" #f="ngForm" class="form-control">
+    <input *ngIf="!isDesabled" type="text" ngModel name="productName" required >
+    <button 
+        class="btn"
+        *ngIf="!isDesabled"
+        type="submit"
+    >Add Product</button>
+</form>
+<app-product 
+    *ngFor="let product of products"
+    [productName]="product"
+    (removeProduct)="removeProduct(product)"
+    > {{ product }} 
+</app-product>

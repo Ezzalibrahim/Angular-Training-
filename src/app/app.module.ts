@@ -16,6 +16,7 @@ import { HomeComponent } from './compononts/home/home.component';
 import { AppRouterModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { AddTaskComponent } from './compononts/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MaterialModule } from './material.module';
     TaskItemComponent,
     ProductsComponent,
     ProductComponent,
-    HomeComponent
+    HomeComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,15 @@
+<div class="">
+    <h1>Task Tracker</h1>
+    <app-button
+        text="{{ showAddTask ? 'Close':'Add' }}"
+        color="{{ showAddTask ? 'red':'green' }}"
+        (onBtnClick)="toggleTaskForm()"
+    ></app-button>
+</div>
+<app-add-task (onAddTask)="addTask($event)" ></app-add-task>
 <app-task-item 
     *ngFor="let task of tasks" [task]="task" 
     (deleteTask)="deleteTaskById(task)"
-
+    (toggleTask)="toggleTaskReminder(task)" 
+    
     ></app-task-item>
